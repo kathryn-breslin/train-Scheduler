@@ -9,3 +9,30 @@ var firebaseConfig = {
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
+
+var database = firebase.database();
+
+//click to add train
+$('#submit').on('click', function() {
+    event.preventDefault();
+
+    var trainName = $('#trainNameInput').val().trim();
+    var trainDestination = $('#destinationInput').val().trim();
+    var trainFirstTime = $('#firstTrainTime').val().trim();
+    var trainFrequency = $('#frequencyInput').val().trim();
+
+    var newTrain = {
+        name: trainName,
+        destination: trainDestination,
+        firstTime: trainFirstTime,
+        frequency: trainFrequency
+    };
+
+    database.ref().push(newTrain);
+
+    console.log(newTrain.name);
+    console.log(newTrain.destination);
+    console.log(newTrain.firstTime);
+    console.log(newTrain.frequency);
+});
+
