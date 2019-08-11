@@ -1,3 +1,36 @@
 .row {
     margin-bottom: 30px;
 }
+
+body {
+    background-image: url('../images/worldMap.jpg');
+    background-size: cover;
+    width: 100%;
+    height: auto;
+}
+
+.jumbotron {
+    background: none;
+}
+
+.jumbotron h1{
+    font-family: 'Roboto Mono', monospace;
+    font-size: 70px;
+    color: #2A436B;
+}
+
+/* .card {
+    background-color: #B8B8B8;
+    color: white;
+} */
+
+.card-header {
+    /* background-color: #808183; */
+    background-color: #2A436B;
+    color: white;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.card-body {
+    font-family: 'Lato', sans-serif;
+}
